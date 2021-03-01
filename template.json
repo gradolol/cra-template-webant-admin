@@ -1,0 +1,81 @@
+{
+  "package": {
+    "homepage": "/admin",
+    "dependencies": {
+      "@date-io/date-fns": "1.x",
+      "@material-ui/pickers": "^3.2.10",
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.3.2",
+      "@testing-library/user-event": "^7.1.2",
+      "axios": "^0.19.2",
+      "date-fns": "^2.15.0",
+      "dayjs": "^1.8.30",
+      "downloadjs": "^1.4.7",
+      "effector": "^21.2.2",
+      "effector-react": "^21.0.4",
+      "html-react-parser": "^1.1.1",
+      "lodash": "^4.17.20",
+      "prop-types": "^15.7.2",
+      "qrcode.react": "^1.0.1",
+      "query-string": "^6.13.1",
+      "ra-compact-ui": "^1.0.16",
+      "ra-data-json-server": "^3.7.1",
+      "ra-input-rich-text": "^3.7.1",
+      "react": "^16.13.1",
+      "react-admin": "^3.8.4",
+      "react-dom": "^16.13.1",
+      "react-scripts": "3.4.1",
+      "socket.io": "^2.3.0",
+      "socket.io-client": "^2.3.0"
+    },
+    
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "build:docker:dev": "docker-compose build && docker-compose pull",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+      "lint": "eslint src/**/*.{js,jsx}",
+      "prettier": "prettier --write 'src/**/*.{js,jsx,json}'"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "babel-eslint": "^10.0.3",
+      "eslint": "^6.6.0",
+      "eslint-config-airbnb": "^18.2.0",
+      "eslint-config-prettier": "^6.11.0",
+      "eslint-loader": "^4.0.2",
+      "eslint-plugin-import": "^2.11.0",
+      "eslint-plugin-jest": "^23.1.1",
+      "eslint-plugin-jsx-a11y": "^6.0.3",
+      "eslint-plugin-prettier": "^3.1.1",
+      "eslint-plugin-react": "^7.7.0",
+      "husky": "^4.3.0",
+      "lint-staged": "^10.4.0",
+      "prettier": "^2.1.2"
+    },
+    
+    "lint-staged": {
+      "*.{js,jsx}": [
+        "yarn run lint",
+        "yarn run prettier",
+        "git add *"
+      ]
+    }
+  }
+}
