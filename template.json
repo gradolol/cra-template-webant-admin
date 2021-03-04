@@ -11,8 +11,6 @@
       "date-fns": "^2.15.0",
       "dayjs": "^1.8.30",
       "downloadjs": "^1.4.7",
-      "effector": "^21.2.2",
-      "effector-react": "^21.0.4",
       "html-react-parser": "^1.1.1",
       "lodash": "^4.17.20",
       "prop-types": "^15.7.2",
@@ -24,23 +22,24 @@
       "react": "^16.13.1",
       "react-admin": "^3.8.4",
       "react-dom": "^16.13.1",
-      "react-scripts": "3.4.1",
-      "socket.io": "^2.3.0",
-      "socket.io-client": "^2.3.0"
+      "react-scripts": "3.4.1"
     },
     
     "scripts": {
       "start": "react-scripts start",
       "build": "react-scripts build",
-      "build:docker:dev": "docker-compose build && docker-compose pull",
+      "build:docker:dev": "docker-compose build && docker-compose push",
       "test": "react-scripts test",
       "eject": "react-scripts eject",
       "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-      "lint": "eslint src/**/*.{js,jsx}",
+      "lint": "eslint ./src --ext .js,.jsx",
+      "lint-fix": "eslint ./src --ext .js,.jsx --fix",
       "prettier": "prettier --write 'src/**/*.{js,jsx,json}'"
     },
     "eslintConfig": {
-      "extends": "react-app"
+      "extends": [
+        "react-app"
+      ]
     },
     "browserslist": {
       "production": [
@@ -56,7 +55,7 @@
     },
     "devDependencies": {
       "babel-eslint": "^10.0.3",
-      "eslint": "^6.6.0",
+      "eslint": "^7.21.0",
       "eslint-config-airbnb": "^18.2.0",
       "eslint-config-prettier": "^6.11.0",
       "eslint-loader": "^4.0.2",
@@ -64,7 +63,7 @@
       "eslint-plugin-jest": "^23.1.1",
       "eslint-plugin-jsx-a11y": "^6.0.3",
       "eslint-plugin-prettier": "^3.1.1",
-      "eslint-plugin-react": "^7.7.0",
+      "eslint-plugin-react": "^7.22.0",
       "husky": "^4.3.0",
       "lint-staged": "^10.4.0",
       "prettier": "^2.1.2"
