@@ -72,8 +72,8 @@
     
     "lint-staged": {
       "*.{js,jsx}": [
-        "yarn run lint",
         "yarn run prettier",
+        "yarn run lint",
         "git add *"
       ]
     }
