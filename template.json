@@ -2,6 +2,8 @@
   "package": {
     "homepage": "/admin",
     "dependencies": {
+      "babel": "^6.23.0",
+      "babel-core": "^6.26.3",
       "@date-io/date-fns": "1.x",
       "@material-ui/pickers": "^3.2.10",
       "@testing-library/jest-dom": "^4.2.4",
@@ -32,9 +34,8 @@
       "test": "react-scripts test",
       "eject": "react-scripts eject",
       "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-      "lint": "eslint ./src --ext .js,.jsx",
-      "lint-fix": "eslint ./src --ext .js,.jsx --fix",
-      "prettier": "prettier --write 'src/**/*.{js,jsx,json}'"
+      "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+      "prettier": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json}'"
     },
     "eslintConfig": {
       "extends": [
@@ -54,8 +55,8 @@
       ]
     },
     "devDependencies": {
-      "babel-eslint": "^10.0.3",
-      "eslint": "^7.21.0",
+      "babel-eslint": "^10.1.0",
+      "eslint": "^6.6.0",
       "eslint-config-airbnb": "^18.2.0",
       "eslint-config-prettier": "^6.11.0",
       "eslint-loader": "^4.0.2",
@@ -71,8 +72,8 @@
     
     "lint-staged": {
       "*.{js,jsx}": [
-        "yarn run lint",
         "yarn run prettier",
+        "yarn run lint",
         "git add *"
       ]
     }

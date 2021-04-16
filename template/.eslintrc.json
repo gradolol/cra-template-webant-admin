@@ -1,37 +1,39 @@
 {
   "env": {
-      "browser": true,
-      "es2021": true
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "commonjs": true
   },
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-  ],
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": 12,
-      "sourceType": "module"
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
-  "plugins": [
-      "react"
-  ],
+  "plugins": ["react"],
   "rules": {
-      "no-var": "error",
-      "semi": ["error", "never"],
-      "quotes": ["error", "single"],
-      "react/jsx-filename-extension": [2, { "extensions": [".jsx"] }],
-      "eol-last": ["error", "always"],
-      "arrow-body-style": ["warn", "as-needed"],
-      "indent": ["error", 2],
-      "no-unused-vars": "error",
-      "react/jsx-uses-vars": "error",
-      "jsx-quotes": ["error", "prefer-single"]
+    "no-var": "error",
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "eol-last": ["error", "always"],
+    "arrow-body-style": ["warn", "as-needed"],
+    "indent": ["warn", 2, { "SwitchCase" : 1 }],
+    "no-unused-vars": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-extra-semi": "off",
+    "no-case-declarations": "off",
+    "no-async-promise-executor": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".jsx"] }],
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off"
   }
 }
